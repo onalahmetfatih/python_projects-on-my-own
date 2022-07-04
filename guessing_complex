@@ -1,0 +1,29 @@
+from itertools import count
+
+secret = "aws"
+guess = ""
+
+counter_guess = 0
+counter_limit = 3
+out_of_guesses = False
+
+#while guess != secret and not out_of_guesses: 
+#eşit olmadığı ya da yanlış olmadığı(which evaluates to true olduğu) müddetçe devam. 
+#yani eşit olursa çık ya da(while olduğu için and not olsa da ya da ya anlamında)True olursa çık
+
+while guess != secret and not out_of_guesses:
+    if counter_guess < counter_limit:
+        guess = input("enter guess: ")
+        counter_guess += 1
+    else:
+        out_of_guesses = True
+
+if out_of_guesses:
+    print("out of guesses")
+else:
+    print("you win")
+
+
+
+
+
